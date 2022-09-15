@@ -1,14 +1,17 @@
 <template>
   <div class="filters">
-    <h3 class="filters__description">{{ name }}
-      <span class="filters__choosen"
-          v-for="(item,index) in choosenFilters"
-          :key="index">
+    <div class="filters__wrap">
+      <div class="filters__title">
+        <h3 class="filters__description">{{ name }}</h3>
+      </div>
+      <div class="filters__cheaps">
+        <span class="filters__choosen"
+              v-for="(item,index) in choosenFilters"
+              :key="index">
         {{item}}
       </span>
-
-    </h3>
-    <div class="filters__wrap"></div>
+      </div>
+    </div>
     <div class="filter">
       <div class="filter__wrap">
         <div class="filter__item">
@@ -115,7 +118,7 @@ export default {
       display: inline-flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 0px 2px 0 16px;
+      margin-right: 8px;
       padding: 5px 10px;
       background: $main-white;
       border: solid 1px $border-color;
@@ -124,18 +127,25 @@ export default {
       color: $text-primary;
       text-transform: uppercase;
       font-weight: 600;
-
-      &:last-child {
-        margin-rigth: 0;
-      }
     }
 
     &__description {
       display: flex;
       align-items: center;
+      white-space: nowrap;
+      margin-right: 16px;
     }
 
-    &__wrap {}
+    &__wrap {
+      display: flex;
+      align-items: center;
+
+    }
+    &__cheaps {
+      flex: auto;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
   }
 
   .filter {

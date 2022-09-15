@@ -100,6 +100,7 @@ export default {
          return el.keywords.includes(...items)
        })
        this.applyFilters = choosen;
+       this.resetPrice()
      }
     }
   },
