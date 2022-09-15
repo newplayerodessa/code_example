@@ -37,8 +37,8 @@
             </div>
           </div>
           <div class="item__body">
-            <p class="item__name">{{card.name}}</p>
-            <p class="item__description">{{card.description}}</p>
+            <div class="item__name">{{card.name}}</div>
+            <div class="item__description">{{card.description}}</div>
             <ul class="item__sizes">
               <span>Available sizes:</span>
               <li
@@ -196,10 +196,9 @@ export default {
   }
 
   &__description {
+    flex: 1 0 auto;
+    margin-bottom: 16px;
     @include _item-description;
-    flex: 1 0;
-    height: 100%;
-
   }
 
   &__name, &__price {
