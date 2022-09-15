@@ -78,18 +78,15 @@ export default {
     name: String,
   },
   data() {
+    //fetch filters from api in future
     return {
       pricePicker: null,
       isSize: false,
       isColor: false,
       isPrice: false,
       checked: [],
-      sizes: ['xl', 'l', 'm', 's'],
+      sizes: ['xl', 'l', 'm'],
       colors: ['red', 'green', 'blue'],
-      // availableFilters: [
-      //   {name: 'sizes', values: ['xl', 'l', 'm', 's']},
-      //   {name: 'colors', values: ['red', 'green', 'blue']}
-      // ]
     }
   },
   computed: {
